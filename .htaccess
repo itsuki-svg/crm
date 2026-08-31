@@ -1,0 +1,29 @@
+RewriteEngine On
+RewriteBase /crm/
+
+# ログイン・ダッシュボード
+RewriteRule ^login$      public/login.php [L]
+RewriteRule ^login/$     public/login.php [L]
+RewriteRule ^dashboard$  pages/dashboard.php [L]
+
+# メイン機能（クエリパラメータ対応）
+RewriteRule ^customers$        pages/customers.php [QSA,L]
+RewriteRule ^customers/([0-9]+)$ pages/customer_detail.php?id=$1 [QSA,L]
+RewriteRule ^leads$            pages/leads.php [QSA,L]
+RewriteRule ^deals$            pages/deals.php [QSA,L]
+RewriteRule ^deals/([0-9]+)$  pages/deal_detail.php?id=$1 [QSA,L]
+RewriteRule ^tasks$            pages/tasks.php [QSA,L]
+RewriteRule ^todos$            pages/todos.php [QSA,L]
+
+# Google連携
+RewriteRule ^mail$             pages/mail.php [QSA,L]
+RewriteRule ^unknown$          pages/unknown_notices.php [QSA,L]
+RewriteRule ^calendar$         pages/calendar.php [QSA,L]
+
+# 管理
+RewriteRule ^employees$        pages/employees.php [QSA,L]
+RewriteRule ^employees/([0-9]+)$ pages/employee_detail.php?id=$1 [QSA,L]
+RewriteRule ^report$           pages/report.php [QSA,L]
+RewriteRule ^settings$         pages/settings.php [QSA,L]
+RewriteRule ^gmail-setting$    pages/gmail_setting.php [QSA,L]
+RewriteRule ^api-settings$     pages/api_settings.php [QSA,L]

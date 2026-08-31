@@ -1,0 +1,14 @@
+Order deny,allow
+Deny from all
+
+<Files "logout.php">
+  Allow from all
+</Files>
+
+<Files "google_login.php">
+  Allow from all
+</Files>
+
+<Files "google_callback.php">
+  Allow from all
+</Files>

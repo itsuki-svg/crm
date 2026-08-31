@@ -1,0 +1,9 @@
+Options -Indexes
+
+<LimitExcept GET POST>
+  Deny from all
+</LimitExcept>
+
+<FilesMatch "\.(sql|log|env|json|lock|md|bak)$">
+  Deny from all
+</FilesMatch>

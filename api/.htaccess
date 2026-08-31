@@ -1,0 +1,5 @@
+Options -Indexes
+
+<FilesMatch "\.(sql|log|env|json|lock|md|bak)$">
+  Deny from all
+</FilesMatch>
